@@ -1,106 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Scoopy That Poopy LLC</title>
+  <link rel="icon" type="image/png" href="images/logoI.png">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js" defer></script>
+  <title>Scoopy That Poopy</title>
 </head>
-
 <body>
   <header>
-    <img src="/images/logo.png" style="width:25%;" alt="logo" title="Scoopy That Poop LLC.">
-    <img src="/images/peekingDog.jpg" style="width: 25%;" alt="peeking dogs face from the snout up">
+    <picture id="header-picture">
+      <source srcset="images/logo.png" media="(min-width: 500px)">
+      <img src="images/logoM.png" alt="logo" title="Scoopy That Poopy LLC.">
+    </picture>
     <nav>
-      <ul id="nav-list">
-        <li>
-          <a href="index.html">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="services.html">
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            Contact Us
-          </a>
-        </li>
-      </ul>
+      <div class="navbar">
+        <button class="current-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='#service-section'">Services</button>
+        <button class="nav-button" onclick="location.href='#contact-section'">Contact</button>
+      </div>
     </nav>
   </header>
-  <section id="about-section">
-    <h1>
-      Why choose us?
-    </h1>
-    <div>
-      <!-- created for style -->
-       &nbsp;
+  <main>
+    <div class="notification" id="notification">
+      <span id="message">Too much dog &#128169;?</span>
     </div>
-    <article>
-      <p class="about-paragraph">
-        Flexible scheduling tailored to your needs
-      </p>
-      <p class="about-paragraph">
-        Environmentally safe and pet-friendly
-      </p>
-      <p class="about-paragraph">
-        Reliable and trusted services
-      </p>
-      <p class="about-paragraph">
-        Local, family-owned business
-      </p>
-    </article>
-    <article id="image">
-      <img src="images/snugglingDog.jpg" alt="dog snout poking out of a blanket" style="width: 100%;">
-    </article>
-  </section>
-  <section id="services">
-    <h1>
-      Services
-    </h1>
-    <article>
-      <p>
-        All prices displayed are quotes for 1 dog only! Feel free to reach out to inquire about our mult-pet rates.
-      </p>
-        <ul>
+    <section id="about-section">
+      <article class="image-article">
+        <img src="images/dogWalkM.png" alt="Group of dogs being walked">
+      </article>
+      <p>Scoopy That Poopy is a local, family-owned business dedicated to providing top-notch pet waste removal services.</p>
+      <p>We understand the importance of a clean and safe environment for you and your pets, which is why we offer flexible scheduling and affordable pricing with no hidden fees.</p>
+      <article class="image-article">
+        <img src="images/goldDogM.png" alt="Golden dog running through park">
+      </article>
+    </section>
+    <section id="service-section">
+      <article class="service-article" id="service-article">
+        <h1>Services</h1>
+        <p>We service All of Las Vegas, Nevada! This includes; Centennial Hills, North Las Vegas, Sunrise Manor, Summerlin, Spring Valley, Henderson, and Lake Las Vegas!</p>
+        <p>The following recurring rates are based on the number of dogs you have.</p>
+        <label for="rateList">How many dogs do you have?</label>
+        <select id="rateList" name="dogNum">
+          <option value="" disabled selected>Select #</option>
+          <option value="one">1</option>
+          <option value="twotothree">2-3</option>
+          <option value="fourplus">4+</option>
+        </select>
+      </article>
+      <article class="service-article" id="price-article">
+        <ul class="service-list" id="service-type">
           <li>
-            <a href="services.html#recurring">
-              Recurring Services
-            </a>
+            Initial/One-time Clean-up
           </li>
           <li>
-            <a href="services.html#nonrecurring">
-              Non-Recurring Services            
-            </a>
+            Weekly Service Fee
+          </li>
+          <li>
+            Bi-Weekly Service Fee
+          </li>
+          <li>
+            Monthly Service Fee
           </li>
         </ul>
-    </article>
-  </section>
-  <section>
-    <h1 id="contact">
-      Contact us
-    </h1>
-      <article>
-        <p>
-          For any questions, comments or concerns please email us at:
-          <a href="mailto:scoopythatpoopylv@gmail.com">
-            scoopythatpoopylv@gmail.com
-          </a>.
-        </p>
-        <p>
-          Our phone number will be displayed once setup!
-        </p>
+        <ul class="service-list" id="service-price">
+          <li id="initial">
+            $40-$70
+          </li>
+          <li id="week">
+            $15
+          </li>
+          <li id="bi">
+            $21
+          </li>
+          <li id="month">
+            $40
+          </li>
+        </ul>
       </article>
-  </section>
-  <footer>
-    This webpage was created by Fliiipp.
-  </footer>
+    </section>
+    <section id="contact-section">
+      <article class="image-article">
+        <img src="images/fetchDogM.png" alt="Dog leaping for ball">
+      </article>
+      <article id="contact-article">
+        <h1>Contact Us</h1>
+        <p>For any questions, comments or concerns please fill out the form, and we'll reach out to you!</p>
+        <!-- <p>For any questions, comments or concerns please email us at: <a href="mailto:scoopythatpoopylv@gmail.com">scoopythatpoopylv@gmail.com</a>.</p> -->
+        <form id="contact-form">
+          <label for="first-name">*Name:</label><br>
+          <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+          <br>
+          <label for="email">*Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="youremail@domain.com" required>
+          <br>
+          <label for="phone">*Phone:</label><br>
+          <input type="tel" id="phone" name="phone" placeholder="(123)456-7890" maxlength="14">
+          <br>
+          <label for="postal">*Service Postal Code:</label>
+          <input type="text" id="postal" name="postal" placeholder="12345" pattern="\d{5}" maxlength="5" required>
+          <br>
+          <label for="quoteList">*How many dogs?</label>
+          <select id="quoteList" name="dogNum" required>
+            <option value="" disabled selected>Select #</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four-plus">4+</option>
+          </select><br>
+          <label>Recurring services?</label>
+          <input type="checkbox" id="recurring" value="yes">
+          <br>
+          <label for="message">Message:</label>
+          <br>
+          <textarea id="formMessage" rows="4" cols="25" placeholder="'Hi, I would like to inquire about my front, and backyards to be serviced!'"></textarea>
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+      </article>
+    </section>
+  </main>
 </body>
-
 </html>
