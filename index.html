@@ -14,15 +14,17 @@
       <source srcset="images/logo.png" media="(min-width: 500px)">
       <img src="images/logoM.png" alt="logo" title="Scoopy That Poopy LLC.">
     </picture>
-    <nav class="navbar">
-      <button class="current-button" onclick="location.href='index.html'">Home</button>
-      <button class="nav-button" onclick="location.href='#service-section'">Services</button>
-      <button class="nav-button" onclick="location.href='#contact-section'">Contact</button>
+    <nav>
+      <div class="navbar">
+        <button class="current-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='#service-section'">Services</button>
+        <button class="nav-button" onclick="location.href='#contact-section'">Contact</button>
+      </div>
     </nav>
   </header>
   <main>
     <div class="notification" id="notification">
-      <span id="message"></span>
+      <span id="message">Too much dog &#128169;?</span>
     </div>
     <section id="about-section">
       <article class="image-article">
@@ -49,16 +51,32 @@
       </article>
       <article class="service-article" id="price-article">
         <ul class="service-list" id="service-type">
-          <li>Initial/One-time Clean-up</li>
-          <li>Weekly Service Fee</li>
-          <li>Bi-Weekly Service Fee</li>
-          <li>Monthly Service Fee</li>
+          <li>
+            Initial/One-time Clean-up
+          </li>
+          <li>
+            Weekly Service Fee
+          </li>
+          <li>
+            Bi-Weekly Service Fee
+          </li>
+          <li>
+            Monthly Service Fee
+          </li>
         </ul>
         <ul class="service-list" id="service-price">
-          <li id="initial">$40-$70</li>
-          <li id="week">$15</li>
-          <li id="bi">$21</li>
-          <li id="month">$40</li>
+          <li id="initial">
+            $40-$70
+          </li>
+          <li id="week">
+            $15
+          </li>
+          <li id="bi">
+            $21
+          </li>
+          <li id="month">
+            $40
+          </li>
         </ul>
       </article>
     </section>
@@ -69,34 +87,52 @@
       <article id="contact-article">
         <h1>Contact Us</h1>
         <p>For any questions, comments or concerns please fill out the form, and we'll reach out to you!</p>
-        <form id="contact-form">
-          <label for="first-name">*Name:</label><br>
-          <input type="text" id="first-name" name="first-name" placeholder="First Name" required autocomplete="given-name">
-          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required autocomplete="family-name">
-          <br>
-          <label for="email">*Email:</label><br>
-          <input type="email" id="email" name="email" placeholder="youremail@domain.com" required autocomplete="email">
-          <br>
-          <label for="phone">*Phone:</label><br>
-          <input type="tel" id="phone" name="phone" placeholder="(123)456-7890" maxlength="14" required autocomplete="tel" pattern="\(\d{3}\)\s\d{3}-\d{4}">
-          <br>
-          <label for="postal">*Service Postal Code:</label>
-          <input type="text" id="postal" name="postal" placeholder="12345" pattern="\d{5}" maxlength="5" required autocomplete="postal-code">
-          <br>
-          <label for="quoteList">*How many dogs?</label>
-          <select id="quoteList" name="dogNum" required>
-            <option value="" disabled selected>Select #</option>
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four-plus">4+</option>
-          </select><br>
-          <label>Recurring services?</label>
-          <input type="checkbox" id="recurring" value="yes">
-          <br>
-          <label for="message">Message:</label><br>
-          <textarea id="formMessage" rows="4" cols="25" placeholder="'Hi, I would like to inquire about my front, and backyards to be serviced!'"></textarea>
-          <br>
+        <!-- <p>For any questions, comments or concerns please email us at: <a href="mailto:scoopythatpoopylv@gmail.com">scoopythatpoopylv@gmail.com</a>.</p> -->
+        <form id="contact">
+          <fieldset id="personal">
+              <legend>Personal Info</legend>
+
+              <label for="fname">*First Name:</label>
+              <input type="text" id="fname" name="fname" placeholder="First Name" aria-label="true">
+
+              <label for="lname">*Last Name:</label>
+              <input type="text" id="lname" name="lname" placeholder="Last Name" aria-label="true">
+              
+
+              <label for="email">*Email:</label>
+              <input type="email" id="email" name="email" placeholder="userid@google.com" aria-label="true">
+
+              <label for="phone">*Phone:</label>
+              <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" maxlength="14" aria-label="true">
+
+          </fieldset>
+          <fieldset id="service">
+              <legend>Service Info</legend>
+
+              <label for="postal">*Postal Code:</label>
+              <input type="text" id="postal" name="postal" placeholder="12345" pattern="\d{5}" maxlength="5" aria-label="true">
+
+              <label for="quoteList">*How many dogs?</label>
+              <select id="quoteList" name="dogNum" aria-label="true">
+                  <option value="" disabled selected>Select #</option>
+
+                  <option value="one">1</option>
+
+                  <option value="two">2</option>
+
+                  <option value="three">3</option>
+
+                  <option value="four-plus">4+</option>
+
+              </select>
+              
+              <label>Recurring services?</label>
+              <input type="checkbox" id="recurring" name="recurring" value="yes">
+
+              <label for="message">Optional Message:</label>
+              <textarea id="message" name="message" rows="4" cols="25" placeholder="Hi, I would like to inquire about my front, and backyards to be serviced!"></textarea>
+          
+          </fieldset>
           <button type="submit">Submit</button>
         </form>
       </article>
