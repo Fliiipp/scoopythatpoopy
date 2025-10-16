@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
       message: document.getElementById("message").value
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbwglSYI_QIoVrfvbO-2SCB7ArjChbJ9BgsQ7cXZDhQqG7NYMi8XOpEE3Uy5FMiGKJos/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbw2fVdmZtkIls8MpilB-2pdLzNMPdGWO2UJlXPRmhA1a06cfchGDygYPHNqqPs38Y-q/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
@@ -135,3 +135,4 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => alert("❌ Submission failed: " + err));
   });
 });
+
