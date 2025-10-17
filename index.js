@@ -29,9 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ********Start Notification Script********
 const messages = [
-  "Too much dog 💩?",
-  "📢 2 weeks FREE when you sign up for our MONTHLY recurring services!",
-  "If they poop, we scoop!"
+  // "Too much dog 💩?",
+  // "📢 2 weeks FREE when you sign up for our MONTHLY recurring services!",
+  // "If they poop, we scoop!"
+  "Website is still under construction",
+  "Sorry for any inconvenience! 10/17/25"
 ];
 let index = 0;
 const messageEl = document.getElementById("message");
@@ -108,3 +110,4 @@ document.getElementById("contact").addEventListener("submit", async (e) => {
   }
 });
 // ********End Form Submit********
+
