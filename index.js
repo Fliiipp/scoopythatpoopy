@@ -49,8 +49,10 @@ selector.addEventListener("change", () => {
 
 // End Price List Script Start Notification Script
 const messages = [
-    "📢 2 weeks FREE when you sign up for our MONTHLY recurring services!",
-    "If they poop, we scoop!"
+    // "📢 2 weeks FREE when you sign up for our MONTHLY recurring services!",
+    // "If they poop, we scoop!"
+  "This website is still undergoing construction!",
+  "Sorry for any inconvenience! 10/17/25"
 ];
 
 let index = 0;
@@ -135,4 +137,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => alert("❌ Submission failed: " + err));
   });
 });
+
 
