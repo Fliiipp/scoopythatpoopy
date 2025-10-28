@@ -1,0 +1,46 @@
+function doPost(e) {
+  try {
+    // Parse incoming JSON
+    const data = JSON.parse(e.postData.contents);
+
+    // Example: save to Google Sheet (optional)
+    const sheet = SpreadsheetApp.openById("1znr-UBkw4GEeWvlgpG7HD7A2ZLrVaPyrpgN8HnOvPT4").getSheetByName("FormData");
+    sheet.appendRow([
+      new Date(),
+      data.firstName,
+      data.lastName,
+      data.email,
+      data.phone,
+      data.postal,
+      data.message
+    ]);
+
+    // Build a success response
+    const result = {
+      status: "success",
+      message: "Data saved successfully"
+    };
+
+    return ContentService
+      .createTextOutput(JSON.stringify(result))
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeader("Access-Control-Allow-Origin", "*"); // ✅ CORS fix
+  } catch (err) {
+    const result = {
+      status: "error",
+      message: err.message
+    };
+    return ContentService
+      .createTextOutput(JSON.stringify(result))
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeader("Access-Control-Allow-Origin", "*");
+  }
+}
+
+// Optional: handle preflight CORS requests (for some browsers)
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "ok" }))
+    .setMimeType(ContentService.MimeType.JSON)
+    .setHeader("Access-Control-Allow-Origin", "*");
+}

@@ -1,0 +1,275 @@
+/* index.css */
+/* ------------------ */
+/* Main Layout and Page Sections */
+/* ------------------ */
+
+@import url("./variables.css");
+@import url("./components.css");
+
+/* ---------- Global Layout ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  margin: 0;
+  width: 100%;
+  color: var(--color-light);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+header img {
+  border-radius: var(--border-radius);
+  border: var(--border-outset);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  margin: var(--space-xs);
+  padding: var(--space-xs);
+  width: 100%;
+}
+
+#navList {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-dark);
+  padding: var(--space-xs);
+  margin: 0;
+  gap: var(--space-md);
+  list-style: none;
+  width: 250px;
+}
+
+#navList li a {
+  text-decoration: none;
+  padding: 5%;
+}
+
+#current,
+.other {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  margin: 1%;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 13px;
+  border: var(--border-outset);
+}
+
+#current {
+  background-color: var(--color-accent);
+  border-color: var(--color-light);
+}
+
+/* ---------- Section Layouts ---------- */
+section {
+  margin-bottom: var(--space-md);
+  width: 100%;
+}
+
+.pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.random-dog {
+  margin: 1%;
+  border-radius: var(--border-radius);
+}
+
+/* ---------- Services Section ---------- */
+#cost {
+  width: 98%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: var(--space-xs);
+  align-items: start;
+  opacity: 1;
+  transition: opacity var(--transition-slow);
+}
+
+#type,
+#price {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-xs);
+}
+
+#type {
+  text-align: left;
+}
+
+#price {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10%;
+}
+
+
+@media screen and (min-width: 600px) {
+  .pair {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2%;
+  }
+
+  .pair:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* .pair article, */
+  .pair img {
+    width: 48%;
+  }
+
+  footer {
+    margin: 1%;
+    text-align: center;
+  }
+}
+
+/* ---------- Contact Form Layout ---------- */
+
+#form {
+  width: 100%;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: var(--border-solid);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--space-md);
+  text-align: left;
+}
+
+#info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+#info fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: var(--space-sm);
+}
+
+/* Make inputs and selects fill their containers */
+#info input,
+#info textarea,
+#info select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  #info {
+    grid-template-columns: 1fr;
+  }
+
+  #info fieldset {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+  width: 80%;
+  background-color: var(--color-light);
+  border: var(--border-outset);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0 0 var(--space-md) 0;
+}
+
+footer a {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  padding: var(--space-md);
+  margin: 0;
+}
+
+/* ---------- Legal Pages ---------- */
+.legal {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: var(--border-solid);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 900px;
+  padding: var(--space-lg);
+  margin: var(--space-lg) auto;
+  line-height: 1.6;
+}
+
+/* Headings inside legal pages */
+.legal h1,
+.legal h2 {
+  color: var(--color-accent);
+}
+
+/* Lists and paragraphs */
+.legal ul,
+.legal ol,
+.legal p,
+.legal li {
+  color: var(--color-dark);
+}
+
+/* Proper spacing for lists */
+.legal ul,
+.legal ol {
+  margin: var(--space-md) 0 var(--space-md) var(--space-md);
+  padding-left: var(--space-md);
+}
+
+.legal li {
+  margin-bottom: var(--space-xs);
+}

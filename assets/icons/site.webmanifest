@@ -1,0 +1,28 @@
+{
+  "name": "Scoopy That Poopy",
+  "short_name": "Scoopy",
+  "description": "Professional pet waste removal in Las Vegas — if they poop, we scoop!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#143127",
+  "theme_color": "#e6861b",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

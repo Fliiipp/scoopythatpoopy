@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ✅ Page setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ Page Title -->
+  <title>Scoopy That Poopy</title>
+
+  <!-- ✅ SEO -->
+  <meta name="description"
+        content="Scoopy That Poopy offers professional, affordable pet waste removal in Las Vegas — safe, reliable, and pet-friendly cleanup for a spotless yard." />
+
+  <!-- ✅ Open Graph (social media sharing) -->
+  <meta property="og:title" content="Scoopy That Poopy - Las Vegas Pet Waste Removal" />
+  <meta property="og:description" content="Reliable, eco-friendly dog waste cleanup for homes and businesses across Las Vegas." />
+  <meta property="og:image" content="images/socialPreview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://scoopythatpoopy.com" />
+
+  <!-- ✅ Favicons and App icons -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Scoopy" />
+  <link rel="manifest" href="assets/icons/site.webmanifest" />
+  <link rel="canonical" href="https://scoopythatpoopy.com/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scoopy That Poopy - Las Vegas Pet Waste Removal">
+  <meta name="twitter:description" content="Reliable, eco-friendly dog waste cleanup across Las Vegas.">
+  <meta name="twitter:image" content="images/socialPreview.jpg">
+
+
+  <!-- ✅ Styles and Preloaded JS Modules -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="modulepreload" href="assets/js/modules/notification.js" />
+  <link rel="modulepreload" href="assets/js/modules/priceList.js" />
+  <link rel="modulepreload" href="assets/js/modules/phoneFormatter.js" />
+  <link rel="modulepreload" href="assets/js/modules/formSubmit.js" />
+  <link rel="modulepreload" href="assets/js/modules/randomImages.js" />
+  <link rel="modulepreload" href="assets/js/modules/schemaData.js" />
+  <link rel="modulepreload" href="assets/js/modules/uiHelpers.js" />
+</head>
+
+<body>
+  <header>
+    <img src="assets/images/logos/logoM.png" alt="Scoopy That Poopy logo" title="Scoopy That Poopy LLC." fetchpriority="high" />
+
+    <nav aria-label="Main Navigation">
+      <ul id="navList">
+        <li><a class="other" href="index.html">Home</a></li>
+        <li><a class="other" href="services.html">Services</a></li>
+        <li><a id="current" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="contact">
+      <article id="faq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <h3>What areas do you service?</h3>
+        <p>We service All of Las Vegas, Nevada! This includes; Centennial Hills, North Las Vegas, Sunrise Manor, Summerlin, Spring Valley, Henderson, and Lake Las Vegas!</p>
+        
+        <h3>How often do you provide services?</h3>
+        <p>We offer weekly, bi-weekly, and monthly recurring services, as well as one-time clean-ups.</p>
+        
+        <h3>What do you do with the pet waste after cleaning it up?</h3>
+        <p>We remove all pet waste from the property and properly dispose of it.</p>
+        
+        <h3>Do I need to be home when my yard is being serviced?</h3>
+        <p>No, you do not need to be home. Just ensure we have yard access and that any aggressive pets are indoors.</p>
+        
+        <h3>Can my dogs be in the yard while it is being serviced?</h3>
+        <p>Yes, as long as you're home and your dog is not aggressive.</p>
+        
+        <h3>What are your prices?</h3>
+        <p>Our prices vary based on; the number of dogs, condition of your yard, and the type of service. Please visit our <a href="services.html">Services</a> page for detailed pricing information.</p>
+        
+        <h3>What methods of payment do you collect?</h3>
+        <p>We accept cash, check, and all major debit/credit cards.</p>
+      </article>
+      
+      <div class="pair">
+        <img class="random-dog" alt="Family and client dogs" loading="lazy" />
+      
+        <img class="random-dog" alt="Family and client dogs" loading="lazy" />
+      </div>
+
+      <article id="moreHelp">
+        <h2>We're Here to Help</h2>
+        <p>
+          Have a question or want to schedule your first visit? Use the form below or reach us
+          directly at <a href="mailto:scoopythatpoopylv@gmail.com">scoopythatpoopylv@gmail.com</a>.
+        </p>
+      </article>
+
+      <div class="pair">
+        <img class="random-dog" alt="Family and client dogs" loading="lazy" />
+
+        <img class="random-dog" alt="Family and client dogs" loading="lazy" />
+      </div>
+
+      <article id="form">
+          <h2>Contact Us</h2>
+          <p>For any questions, comments, or concerns, please fill out the form and we'll reach out to you!</p>
+
+          <form id="info">
+            <fieldset id="personal">
+              <legend>Contact Info</legend>
+              <div class="fullName">
+                <label for="fname">*First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="First Name" required aria-label="true" />
+                <label for="lname">*Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Last Name" required aria-label="true" />
+              </div>
+
+              <label for="email">*Email:</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required aria-label="true" />
+
+              <label for="phone">*Phone:</label>
+              <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" maxlength="14" required aria-label="true" />
+            </fieldset>
+
+            <fieldset id="service">
+              <legend>Service Info</legend>
+
+              <label for="streetLine">*Street Address:</label>
+              <input 
+                type="text" 
+                id="streetLine" 
+                name="streetLine"
+                placeholder="1428 Elm Street"
+                required
+                aria-label="true"
+              />
+
+              <label for="postal">*Postal Code:</label>
+              <input
+                type="text"
+                id="postal"
+                name="postal"
+                placeholder="12345"
+                pattern="\d{5}"
+                maxlength="5"
+                required
+                aria-label="true"
+              /><br>
+
+              <label for="quoteList">*How many dogs?</label>
+              <select id="quoteList" name="dogNum" required aria-label="true">
+                <option value="" disabled selected>#</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+                <option value="seven">7</option>
+                <option value="eight">8</option>
+              </select>
+
+              <label for="recurring">Recurring?</label>
+              <input type="checkbox" id="recurring" name="recurring" value="yes" />
+
+              <label for="user-message">Message:</label>
+              <textarea
+                id="user-message"
+                name="user-message"
+                rows="4"
+                cols="25"
+                placeholder="Hi, I would like to inquire about my front and backyards being serviced!"
+              ></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+          </form>
+        </article>
+      
+      <div class="pair">
+        <img class="random-dog" alt="Family and client dogs" loading="lazy" />
+
+        <img class="random-dog" alt="Family and client dogs" loading="lazy" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Scoopy That Poopy LLC. All rights reserved. <a href="mailto:info@scoopythatpoopy.com">Contact Us</a></p>
+    
+    <nav aria-label="Footer Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* variables.css */
+/* ------------------ */
+/* Global Design Tokens for Scoopy That Poopy */
+/* ------------------ */
+
+:root {
+  /* Brand Colors */
+  --color-dark: rgb(20, 49, 39);
+  --color-light: rgb(252, 243, 225);
+  --color-accent: rgb(230, 134, 27);
+
+  /* Text Colors */
+  --color-text: var(--color-dark);
+  --color-bg: var(--color-light);
+
+  /* Borders & Shadows */
+  --border-radius: 25px;
+  --border-radius-small: 10px;
+  --border-outset: 3px outset var(--color-accent);
+  --border-solid: 3px solid var(--color-accent);
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Typography */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 1em;
+  --font-size-heading: 1.3em;
+  --font-size-subheading: 1.1em;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Responsive typography */
+@media (min-width: 600px) {
+  :root {
+    --font-size-base: 1.1em;
+    --font-size-heading: 1.4em;
+  }
+}

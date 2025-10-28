@@ -1,0 +1,13 @@
+# robots.txt for Scoopy That Poopy
+# This file tells search engines which pages they can crawl
+
+User-agent: *
+Allow: /
+
+# Optional: prevent crawling of non-public files or folders
+# Disallow: /assets/js/
+# Disallow: /assets/css/
+# Disallow: /assets/images/
+
+# Sitemap (works for both GitHub Pages and custom domains)
+Sitemap: /sitemap.xml

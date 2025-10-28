@@ -1,0 +1,198 @@
+/* components.css */
+/* ------------------ */
+/* Reusable UI Elements */
+/* ------------------ */
+
+/* Buttons */
+button,
+form button {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-size: var(--font-size-subheading);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  padding: 5px 15px;
+  border: 1px solid var(--color-dark);
+  cursor: pointer;
+  transition: background-color var(--transition-normal), transform var(--transition-fast);
+}
+
+button:hover,
+form button:hover {
+  background-color: var(--color-light);
+  transform: scale(1.05);
+}
+
+/* Better label spacing */
+form label {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  display: inline-block;
+}
+
+/* Inputs and textareas */
+form input,
+form textarea,
+form select {
+  padding: 10px;
+  font-size: var(--font-size-base);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--color-dark);
+}
+
+/* Textarea should expand naturally */
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+/* Form Elements */
+form input,
+form textarea,
+form select {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-size: var(--font-size-subheading);
+  font-style: italic;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius-small);
+  padding: 5px;
+}
+
+form fieldset {
+  border: none;
+  margin-bottom: var(--space-xs);
+  max-width: 241px;
+}
+
+/* Cards / Containers — scoped to key elements only */
+.card,
+article.pricing,
+article#deodorizer,
+article#form,
+article#faq,
+article#moreHelp,
+article#wasteRemoval,
+article#deodorizing,
+article#lawnCare,
+article#ready,
+#intro,
+#why,
+#how,
+#cost,
+#locale {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: var(--border-solid);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--space-xs);
+}
+
+/* Notifications (for JS banners) */
+.notification,
+#global-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-sm);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform var(--transition-slow), opacity var(--transition-slow);
+}
+
+.notification.show,
+#global-banner.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-family);
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+  color: var(--color-accent);
+}
+
+/* Primary page title */
+h1 {
+  font-size: 1.6em;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(20, 49, 39, 0.3);
+}
+
+/* Section headings */
+h2 {
+  font-size: var(--font-size-heading);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(20, 49, 39, 0.2);
+}
+
+/* Subsection or label headings */
+h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--color-dark);
+  text-shadow: none;
+}
+
+/* ---------- Lists ---------- */
+
+/* General list reset for all cards and info boxes */
+ul, ol {
+  margin: 0;
+  padding-left: var(--space-md);
+  color: var(--color-dark);
+}
+
+/* Remove bullets where needed */
+#why ul,
+.services-list,
+#deodorizer ul {
+  list-style: none;
+  padding: var(--space-md);
+}
+
+/* Align service and deodorizer lists to the left */
+#type,
+#price,
+#deodorizer ul {
+  text-align: left;
+}
+
+/* Add some spacing between list items */
+ul li,
+ol li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Optional: emphasize list bullets in other sections */
+#why ul li::before {
+  content: "• ";
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+#price li {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Utility: Hidden State */
+.hidden {
+  display: none !important;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
