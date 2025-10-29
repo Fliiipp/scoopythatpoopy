@@ -5,6 +5,7 @@ import { $$, $ } from "./uiHelpers.js";
 
 const imageFiles = [
   { name: "budSammy", ext: "jpg" },
+  { name: "jaxFrenchiepibbles", ext: "jpg" },
   { name: "jersey", ext: "jpg" },
   { name: "milo", ext: "jpg" },
   { name: "phoenixLucyPrudence", ext: "jpg" },
@@ -17,6 +18,7 @@ const imageFiles = [
 
 const altDescriptions = {
   budSammy: "Bud and Sammy awaiting their food.",
+  jaxFrenchiepibbles: "Jax and Frenchie Pibbles enjoying some playtime.",
   jersey: "Jersey lying down on the porch.",
   milo: "Milo getting cleaned up.",
   phoenixLucyPrudence: "Phoenix, Lucy and Prudence awaiting a treat.",
