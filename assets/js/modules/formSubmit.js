@@ -4,7 +4,7 @@
 import { $, showBanner, postJSON } from "./uiHelpers.js";
 
 const ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbz7W5F733twrOetLkZ8ppHcxI3E3VbbfOBpcPOK79IVtkYxsvwiV3WklAXzZzZCZl2u/exec";
+  "https://scoopy-proxy.kristi24lv.workers.dev/";
 
 export function initFormSubmit() {
   const formWrapper = $("#form");
