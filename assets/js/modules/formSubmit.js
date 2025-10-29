@@ -30,7 +30,7 @@ export function initFormSubmit() {
 
 
     // basic validation
-    if (!data.fname || !data.lname) {
+    if (!data.firstName || !data.lastName) {
       showBanner("⚠️ Please enter your full name.", "error");
       return;
     }
