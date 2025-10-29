@@ -17,13 +17,17 @@ export function initFormSubmit() {
     e.preventDefault();
 
     const data = {
-      fname: $("#fname")?.value.trim(),
-      lname: $("#lname")?.value.trim(),
+      firstName: $("#fname")?.value.trim(),
+      lastName: $("#lname")?.value.trim(),
       email: $("#email")?.value.trim(),
       phone: $("#phone")?.value.replace(/\D/g, ""),
+      streetline: $("#streetLine")?.value.trim() || "",
       postal: $("#postal")?.value.trim(),
-      message: $("#user-message")?.value.trim() || "",
+      dogs: $("#quoteList")?.value || "",
+      recurring: $("#recurring")?.checked ? "yes" : "no",
+      message: $("#user-message")?.value.trim() || ""
     };
+
 
     // basic validation
     if (!data.fname || !data.lname) {
