@@ -186,8 +186,7 @@ section {
 /* Make inputs and selects fill their containers */
 #info input,
 #info textarea,
-#info select,
-#locale select {
+#info select {
   width: 100%;
   box-sizing: border-box;
 }
