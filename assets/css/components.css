@@ -33,7 +33,8 @@ form label {
 /* Inputs and textareas */
 form input,
 form textarea,
-form select {
+form select,
+#locale select {
   padding: 10px;
   font-size: var(--font-size-base);
   border-radius: var(--border-radius-small);
@@ -50,7 +51,8 @@ form textarea {
 /* Form Elements */
 form input,
 form textarea,
-form select {
+form select,
+#locale select {
   background-color: var(--color-accent);
   color: var(--color-dark);
   font-size: var(--font-size-subheading);
