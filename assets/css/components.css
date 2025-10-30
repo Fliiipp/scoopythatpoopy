@@ -23,6 +23,10 @@ form button:hover {
   transform: scale(1.05);
 }
 
+#form button {
+  width: 75%;
+}
+
 /* Better label spacing */
 form label {
   font-weight: 600;
